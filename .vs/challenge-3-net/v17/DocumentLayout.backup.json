@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\README.md",
               "RelativeDocumentMoniker": "challenge-3-net\\README.md",
@@ -94,7 +94,8 @@
               "RelativeToolTip": "challenge-3-net\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-10-01T20:12:26.786Z"
+              "WhenOpened": "2025-10-01T20:12:26.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -106,31 +107,34 @@
               "RelativeToolTip": "challenge-3-net\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-01T15:47:28.889Z"
+              "WhenOpened": "2025-10-01T15:47:28.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Program.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Program.cs",
               "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Program.cs",
               "RelativeToolTip": "challenge-3-net\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAmwGwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:18:14.294Z"
+              "WhenOpened": "2025-09-28T04:18:14.294Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "challenge-3-net\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAswL4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAmwLgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:44:38.584Z"
+              "WhenOpened": "2025-09-14T13:44:38.584Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -155,7 +159,8 @@
               "RelativeToolTip": "challenge-3-net\\Models\\Usuario.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAkwGoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:02.489Z"
+              "WhenOpened": "2025-09-29T15:10:02.489Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -167,7 +172,8 @@
               "RelativeToolTip": "challenge-3-net\\Controllers\\UsuariosController.cs",
               "ViewState": "AgIAAMgAAAAAAAAAAAAkwNEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:43:43.471Z"
+              "WhenOpened": "2025-09-14T13:43:43.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -179,7 +185,8 @@
               "RelativeToolTip": "challenge-3-net\\Repositories\\UsuarioRepository.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAqwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:20.397Z"
+              "WhenOpened": "2025-09-29T15:10:20.397Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -191,7 +198,8 @@
               "RelativeToolTip": "challenge-3-net\\Services\\UsuarioService.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAowJAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:33.749Z"
+              "WhenOpened": "2025-09-29T15:10:33.749Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -203,7 +211,8 @@
               "RelativeToolTip": "challenge-3-net\\Services\\Interfaces\\IUsuarioService.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAWwEkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:52.549Z"
+              "WhenOpened": "2025-09-29T15:10:52.549Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -213,9 +222,10 @@
               "RelativeDocumentMoniker": "challenge-3-net\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Properties\\launchSettings.json",
               "RelativeToolTip": "challenge-3-net\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABEAAAAAAAAAAABRwBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAABhwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-28T04:23:37.456Z"
+              "WhenOpened": "2025-09-28T04:23:37.456Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -227,7 +237,8 @@
               "RelativeToolTip": "challenge-3-net\\Controllers\\OperacoesController.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAAcwLUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:42:56.438Z"
+              "WhenOpened": "2025-09-14T13:42:56.438Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -239,7 +250,8 @@
               "RelativeToolTip": "challenge-3-net\\Controllers\\MotosController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowMAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:41:47.848Z"
+              "WhenOpened": "2025-09-14T13:41:47.848Z",
+              "EditorCaption": ""
             }
           ]
         }
