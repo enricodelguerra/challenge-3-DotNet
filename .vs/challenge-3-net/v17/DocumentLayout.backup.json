@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\gitignore challenge-3-net\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gitignore challenge-3-net\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|solutionrelative:challenge-3-net\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD1FBF65-2054-47E0-8916-20B6DE2C0CD9}|challenge-3-net\\challenge-3-net.csproj|c:\\users\\enrico del guerra\\onedrive\\fiap\\2tdsph\\advanced business development with .net\\challenge-3-net\\challenge-3-net\\challenge-3-net\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,32 +82,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\gitignore challenge-3-net\\.gitignore",
-              "RelativeDocumentMoniker": "gitignore challenge-3-net\\.gitignore",
-              "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\gitignore challenge-3-net\\.gitignore",
-              "RelativeToolTip": "gitignore challenge-3-net\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-01T16:02:47.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Dockerfile",
               "RelativeDocumentMoniker": "challenge-3-net\\Dockerfile",
               "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Dockerfile",
               "RelativeToolTip": "challenge-3-net\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-10-01T15:47:28.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Program.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Program.cs",
@@ -119,12 +102,11 @@
               "RelativeToolTip": "challenge-3-net\\Program.cs",
               "ViewState": "AgIAAFMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:18:14.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T04:18:14.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Data\\ApplicationDbContext.cs",
@@ -132,24 +114,24 @@
               "RelativeToolTip": "challenge-3-net\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAlwCcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:44:38.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T13:44:38.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\appsettings.json",
               "RelativeDocumentMoniker": "challenge-3-net\\appsettings.json",
               "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\appsettings.json",
               "RelativeToolTip": "challenge-3-net\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-28T04:18:17.391Z"
+              "WhenOpened": "2025-09-28T04:18:17.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Models\\Usuario.cs",
@@ -161,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Controllers\\UsuariosController.cs",
@@ -173,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Repositories\\UsuarioRepository.cs",
@@ -185,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Services\\UsuarioService.cs",
@@ -197,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IUsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Services\\Interfaces\\IUsuarioService.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Services\\Interfaces\\IUsuarioService.cs",
@@ -209,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "challenge-3-net\\Properties\\launchSettings.json",
@@ -221,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "OperacoesController.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Controllers\\OperacoesController.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Controllers\\OperacoesController.cs",
@@ -233,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "MotosController.cs",
               "DocumentMoniker": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\Controllers\\MotosController.cs",
               "RelativeDocumentMoniker": "challenge-3-net\\Controllers\\MotosController.cs",
