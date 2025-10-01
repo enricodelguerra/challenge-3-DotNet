@@ -6,6 +6,7 @@ using challenge_3_net.Services;
 using challenge_3_net.Services.Interfaces;
 using challenge_3_net.Services.Mapping;
 using System.Reflection;
+using Oracle.EntityFrameworkCore; // <- adicione este using
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,7 @@ builder.Services.AddControllers();
 
 // Configurar Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configurar AutoMapper
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
@@ -100,11 +101,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Criar banco de dados se não existir
+// Criar/atualizar banco com migrations
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    context.Database.EnsureCreated();
+    context.Database.Migrate(); // <- use Migrate em vez de EnsureCreated
 }
 
 app.Run();
