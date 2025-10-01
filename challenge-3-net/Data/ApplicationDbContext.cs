@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using challenge_3_net.Models;
-using Microsoft.Extensions.Configuration;
 
 namespace challenge_3_net.Data
 {
@@ -9,11 +8,8 @@ namespace challenge_3_net.Data
     /// </summary>
     public class ApplicationDbContext : DbContext
     {
-        private readonly IConfiguration _configuration;
-
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IConfiguration configuration) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            _configuration = configuration;
         }
 
         /// <summary>
@@ -147,7 +143,7 @@ namespace challenge_3_net.Data
         private void SeedData(ModelBuilder modelBuilder)
         {
             var dataCriacao = new DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            
+
             // Usuários iniciais
             modelBuilder.Entity<Usuario>().HasData(
                 new Usuario
@@ -190,14 +186,6 @@ namespace challenge_3_net.Data
                     DataAtualizacao = dataCriacao
                 }
             );
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseOracle(_configuration.GetConnectionString("DefaultConnection"));
-            }
         }
     }
 }
