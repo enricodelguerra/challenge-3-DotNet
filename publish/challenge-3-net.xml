@@ -1,0 +1,1915 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>challenge-3-net</name>
+    </assembly>
+    <members>
+        <member name="T:challenge_3_net.Controllers.MotosController">
+            <summary>
+            Controller para gerenciamento de motos
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.ObterTodas(System.Int32,System.Int32)">
+            <summary>
+            Lista todas as motos com paginação
+            </summary>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de motos</returns>
+            <response code="200">Retorna a lista de motos</response>
+            <response code="400">Parâmetros inválidos</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.ObterPorId(System.Int64)">
+            <summary>
+            Busca uma moto por ID
+            </summary>
+            <param name="id">ID da moto</param>
+            <returns>Dados da moto</returns>
+            <response code="200">Retorna a moto encontrada</response>
+            <response code="404">Moto não encontrada</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.ObterPorPlaca(System.String)">
+            <summary>
+            Busca uma moto por placa
+            </summary>
+            <param name="placa">Placa da moto</param>
+            <returns>Dados da moto</returns>
+            <response code="200">Retorna a moto encontrada</response>
+            <response code="404">Moto não encontrada</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.ObterPorChassi(System.String)">
+            <summary>
+            Busca uma moto por chassi
+            </summary>
+            <param name="chassi">Chassi da moto</param>
+            <returns>Dados da moto</returns>
+            <response code="200">Retorna a moto encontrada</response>
+            <response code="404">Moto não encontrada</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.ObterPorUsuario(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Lista motos por usuário
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de motos do usuário</returns>
+            <response code="200">Retorna a lista de motos do usuário</response>
+            <response code="400">Parâmetros inválidos</response>
+            <response code="404">Usuário não encontrado</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.Criar(challenge_3_net.Models.DTOs.CriarMotoDto)">
+            <summary>
+            Cria uma nova moto
+            </summary>
+            <param name="dto">Dados da moto a ser criada</param>
+            <returns>Moto criada</returns>
+            <response code="201">Moto criada com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="409">Placa ou chassi já existem</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.Atualizar(System.Int64,challenge_3_net.Models.DTOs.AtualizarMotoDto)">
+            <summary>
+            Atualiza uma moto existente
+            </summary>
+            <param name="id">ID da moto</param>
+            <param name="dto">Dados atualizados da moto</param>
+            <returns>Moto atualizada</returns>
+            <response code="200">Moto atualizada com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Moto não encontrada</response>
+            <response code="409">Placa ou chassi já existem</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.MotosController.Excluir(System.Int64)">
+            <summary>
+            Exclui uma moto
+            </summary>
+            <param name="id">ID da moto</param>
+            <returns>Resultado da operação</returns>
+            <response code="204">Moto excluída com sucesso</response>
+            <response code="404">Moto não encontrada</response>
+        </member>
+        <member name="T:challenge_3_net.Controllers.OperacoesController">
+            <summary>
+            Controller para gerenciamento de operações
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Controllers.OperacoesController.ObterTodos(System.Int32,System.Int32)">
+            <summary>
+            Lista todas as operações com paginação
+            </summary>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de operações</returns>
+            <response code="200">Retorna a lista de operações</response>
+            <response code="400">Parâmetros inválidos</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.OperacoesController.ObterPorId(System.Int32)">
+            <summary>
+            Busca uma operação por ID
+            </summary>
+            <param name="id">ID da operação</param>
+            <returns>Dados da operação</returns>
+            <response code="200">Retorna a operação encontrada</response>
+            <response code="404">Operação não encontrada</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.OperacoesController.Criar(challenge_3_net.Models.DTOs.CriarOperacaoDto)">
+            <summary>
+            Cria uma nova operação
+            </summary>
+            <param name="dto">Dados da operação a ser criada</param>
+            <returns>Operação criada</returns>
+            <response code="201">Operação criada com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Moto ou usuário não encontrados</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.OperacoesController.Atualizar(System.Int32,challenge_3_net.Models.DTOs.AtualizarOperacaoDto)">
+            <summary>
+            Atualiza uma operação existente
+            </summary>
+            <param name="id">ID da operação</param>
+            <param name="dto">Dados atualizados da operação</param>
+            <returns>Operação atualizada</returns>
+            <response code="200">Operação atualizada com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Operação não encontrada</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.OperacoesController.Excluir(System.Int32)">
+            <summary>
+            Exclui uma operação
+            </summary>
+            <param name="id">ID da operação</param>
+            <returns>Resultado da operação</returns>
+            <response code="204">Operação excluída com sucesso</response>
+            <response code="404">Operação não encontrada</response>
+        </member>
+        <member name="T:challenge_3_net.Controllers.StatusMotosController">
+            <summary>
+            Controller para gerenciamento de status de motos
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.ObterTodos(System.Int32,System.Int32)">
+            <summary>
+            Lista todos os status com paginação
+            </summary>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de status</returns>
+            <response code="200">Retorna a lista de status</response>
+            <response code="400">Parâmetros inválidos</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.ObterPorId(System.Int64)">
+            <summary>
+            Busca um status por ID
+            </summary>
+            <param name="id">ID do status</param>
+            <returns>Dados do status</returns>
+            <response code="200">Retorna o status encontrado</response>
+            <response code="404">Status não encontrado</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.ObterStatusAtual(System.Int64)">
+            <summary>
+            Busca o status atual de uma moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <returns>Status atual da moto</returns>
+            <response code="200">Retorna o status atual da moto</response>
+            <response code="404">Moto não encontrada ou sem status</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.ObterHistoricoPorMoto(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Lista histórico de status de uma moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de status da moto</returns>
+            <response code="200">Retorna o histórico de status da moto</response>
+            <response code="400">Parâmetros inválidos</response>
+            <response code="404">Moto não encontrada</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.ObterPorTipo(challenge_3_net.Models.StatusMotoEnum,System.Int32,System.Int32)">
+            <summary>
+            Lista status por tipo
+            </summary>
+            <param name="status">Tipo de status</param>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de status do tipo</returns>
+            <response code="200">Retorna a lista de status do tipo</response>
+            <response code="400">Parâmetros inválidos</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.Criar(challenge_3_net.Models.DTOs.CriarStatusMotoDto)">
+            <summary>
+            Cria um novo status
+            </summary>
+            <param name="dto">Dados do status a ser criado</param>
+            <returns>Status criado</returns>
+            <response code="201">Status criado com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Moto ou usuário não encontrados</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.Atualizar(System.Int64,challenge_3_net.Models.DTOs.AtualizarStatusMotoDto)">
+            <summary>
+            Atualiza um status existente
+            </summary>
+            <param name="id">ID do status</param>
+            <param name="dto">Dados atualizados do status</param>
+            <returns>Status atualizado</returns>
+            <response code="200">Status atualizado com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Status, moto ou usuário não encontrados</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.StatusMotosController.Excluir(System.Int64)">
+            <summary>
+            Exclui um status
+            </summary>
+            <param name="id">ID do status</param>
+            <returns>Resultado da operação</returns>
+            <response code="204">Status excluído com sucesso</response>
+            <response code="404">Status não encontrado</response>
+        </member>
+        <member name="T:challenge_3_net.Controllers.UsuariosController">
+            <summary>
+            Controller para gerenciamento de usuários
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Controllers.UsuariosController.ObterTodos(System.Int32,System.Int32)">
+            <summary>
+            Lista todos os usuários com paginação
+            </summary>
+            <param name="pageNumber">Número da página (padrão: 1)</param>
+            <param name="pageSize">Tamanho da página (padrão: 10)</param>
+            <returns>Lista paginada de usuários</returns>
+            <response code="200">Retorna a lista de usuários</response>
+            <response code="400">Parâmetros inválidos</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.UsuariosController.ObterPorId(System.Int32)">
+            <summary>
+            Busca um usuário por ID
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Dados do usuário</returns>
+            <response code="200">Retorna o usuário encontrado</response>
+            <response code="404">Usuário não encontrado</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.UsuariosController.Criar(challenge_3_net.Models.DTOs.CriarUsuarioDto)">
+            <summary>
+            Cria um novo usuário
+            </summary>
+            <param name="dto">Dados do usuário a ser criado</param>
+            <returns>Usuário criado</returns>
+            <response code="201">Usuário criado com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="409">Email ou CNPJ já existem</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.UsuariosController.Atualizar(System.Int32,challenge_3_net.Models.DTOs.AtualizarUsuarioDto)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário</param>
+            <param name="dto">Dados atualizados do usuário</param>
+            <returns>Usuário atualizado</returns>
+            <response code="200">Usuário atualizado com sucesso</response>
+            <response code="400">Dados inválidos</response>
+            <response code="404">Usuário não encontrado</response>
+            <response code="409">Email ou CNPJ já existem</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.UsuariosController.Excluir(System.Int32)">
+            <summary>
+            Exclui um usuário
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Resultado da operação</returns>
+            <response code="204">Usuário excluído com sucesso</response>
+            <response code="404">Usuário não encontrado</response>
+        </member>
+        <member name="M:challenge_3_net.Controllers.UsuariosController.Login(challenge_3_net.Controllers.UsuariosController.LoginRequest)">
+            <summary>
+            Realiza o login do usuário
+            </summary>
+            <param name="request">Dados de login (Email e Senha)</param>
+            <returns>Usuário autenticado</returns>
+            <response code="200">Login realizado com sucesso</response>
+            <response code="401">Usuário ou senha inválidos</response>
+        </member>
+        <member name="T:challenge_3_net.Data.ApplicationDbContext">
+            <summary>
+            Contexto do Entity Framework para a aplicação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Data.ApplicationDbContext.Usuarios">
+            <summary>
+            Tabela de usuários
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Data.ApplicationDbContext.Motos">
+            <summary>
+            Tabela de motos
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Data.ApplicationDbContext.Operacoes">
+            <summary>
+            Tabela de operações
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Data.ApplicationDbContext.StatusMotos">
+            <summary>
+            Tabela de status das motos
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:challenge_3_net.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:challenge_3_net.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:challenge_3_net.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:challenge_3_net.Migrations.SeedData">
+            <inheritdoc />
+        </member>
+        <member name="M:challenge_3_net.Migrations.SeedData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:challenge_3_net.Migrations.SeedData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:challenge_3_net.Migrations.SeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.PagedResultDto`1">
+            <summary>
+            DTO para resultado paginado
+            </summary>
+            <typeparam name="T">Tipo dos itens da página</typeparam>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.Items">
+            <summary>
+            Itens da página atual
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.PageNumber">
+            <summary>
+            Número da página atual
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.PageSize">
+            <summary>
+            Tamanho da página
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.TotalItems">
+            <summary>
+            Total de itens
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.TotalPages">
+            <summary>
+            Total de páginas
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.HasPreviousPage">
+            <summary>
+            Indica se há página anterior
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.HasNextPage">
+            <summary>
+            Indica se há próxima página
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.PagedResultDto`1.Links">
+            <summary>
+            Links HATEOAS para navegação
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.LinkDto">
+            <summary>
+            DTO para links HATEOAS
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.LinkDto.Href">
+            <summary>
+            URL do link
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.LinkDto.Rel">
+            <summary>
+            Relação do link (self, next, previous, etc.)
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.LinkDto.Method">
+            <summary>
+            Método HTTP do link
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.LinkDto.Description">
+            <summary>
+            Descrição do link
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.ErrorResponseDto">
+            <summary>
+            DTO para resposta de erro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.ErrorResponseDto.Code">
+            <summary>
+            Código do erro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.ErrorResponseDto.Message">
+            <summary>
+            Mensagem do erro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.ErrorResponseDto.Details">
+            <summary>
+            Detalhes adicionais do erro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.ErrorResponseDto.Timestamp">
+            <summary>
+            Timestamp do erro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.ErrorResponseDto.ValidationErrors">
+            <summary>
+            Lista de erros de validação
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.CriarMotoDto">
+            <summary>
+            DTO para criação de moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarMotoDto.Placa">
+            <summary>
+            Placa da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarMotoDto.Chassi">
+            <summary>
+            Número do chassi da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarMotoDto.Motor">
+            <summary>
+            Informações do motor da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarMotoDto.UsuarioId">
+            <summary>
+            ID do usuário proprietário da moto
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.AtualizarMotoDto">
+            <summary>
+            DTO para atualização de moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarMotoDto.Placa">
+            <summary>
+            Placa da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarMotoDto.Chassi">
+            <summary>
+            Número do chassi da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarMotoDto.Motor">
+            <summary>
+            Informações do motor da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarMotoDto.UsuarioId">
+            <summary>
+            ID do usuário proprietário da moto
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.MotoResponseDto">
+            <summary>
+            DTO para resposta de moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.Id">
+            <summary>
+            Identificador único da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.Placa">
+            <summary>
+            Placa da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.Chassi">
+            <summary>
+            Número do chassi da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.Motor">
+            <summary>
+            Informações do motor da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.UsuarioId">
+            <summary>
+            ID do usuário proprietário da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.NomeFilial">
+            <summary>
+            Nome da filial proprietária
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.DataCriacao">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.DataAtualizacao">
+            <summary>
+            Data da última atualização do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.MotoResponseDto.Links">
+            <summary>
+            Links HATEOAS
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.CriarOperacaoDto">
+            <summary>
+            DTO para criação de operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarOperacaoDto.TipoOperacao">
+            <summary>
+            Tipo da operação realizada
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarOperacaoDto.Descricao">
+            <summary>
+            Descrição detalhada da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarOperacaoDto.MotoId">
+            <summary>
+            ID da moto envolvida na operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarOperacaoDto.UsuarioId">
+            <summary>
+            ID do usuário que realizou a operação
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.AtualizarOperacaoDto">
+            <summary>
+            DTO para atualização de operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarOperacaoDto.TipoOperacao">
+            <summary>
+            Tipo da operação realizada
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarOperacaoDto.Descricao">
+            <summary>
+            Descrição detalhada da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarOperacaoDto.MotoId">
+            <summary>
+            ID da moto envolvida na operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarOperacaoDto.UsuarioId">
+            <summary>
+            ID do usuário que realizou a operação
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.OperacaoResponseDto">
+            <summary>
+            DTO para resposta de operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.Id">
+            <summary>
+            Identificador único da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.TipoOperacao">
+            <summary>
+            Tipo da operação realizada
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.Descricao">
+            <summary>
+            Descrição detalhada da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.DataOperacao">
+            <summary>
+            Data e hora da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.MotoId">
+            <summary>
+            ID da moto envolvida na operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.PlacaMoto">
+            <summary>
+            Placa da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.UsuarioId">
+            <summary>
+            ID do usuário que realizou a operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.NomeUsuario">
+            <summary>
+            Nome do usuário que realizou a operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.OperacaoResponseDto.Links">
+            <summary>
+            Links HATEOAS
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.CriarStatusMotoDto">
+            <summary>
+            DTO para criação de status de moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarStatusMotoDto.Status">
+            <summary>
+            Status atual da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarStatusMotoDto.Descricao">
+            <summary>
+            Descrição detalhada do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarStatusMotoDto.Area">
+            <summary>
+            Área onde a moto se encontra
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarStatusMotoDto.MotoId">
+            <summary>
+            ID da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarStatusMotoDto.UsuarioId">
+            <summary>
+            ID do usuário que registrou o status
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.AtualizarStatusMotoDto">
+            <summary>
+            DTO para atualização de status de moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarStatusMotoDto.Status">
+            <summary>
+            Status atual da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarStatusMotoDto.Descricao">
+            <summary>
+            Descrição detalhada do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarStatusMotoDto.Area">
+            <summary>
+            Área onde a moto se encontra
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarStatusMotoDto.MotoId">
+            <summary>
+            ID da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarStatusMotoDto.UsuarioId">
+            <summary>
+            ID do usuário que registrou o status
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.StatusMotoResponseDto">
+            <summary>
+            DTO para resposta de status de moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.Id">
+            <summary>
+            Identificador único do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.Status">
+            <summary>
+            Status atual da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.Descricao">
+            <summary>
+            Descrição detalhada do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.Area">
+            <summary>
+            Área onde a moto se encontra
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.DataStatus">
+            <summary>
+            Data e hora do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.MotoId">
+            <summary>
+            ID da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.PlacaMoto">
+            <summary>
+            Placa da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.UsuarioId">
+            <summary>
+            ID do usuário que registrou o status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.NomeUsuario">
+            <summary>
+            Nome do usuário que registrou o status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.StatusMotoResponseDto.Links">
+            <summary>
+            Links HATEOAS
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.CriarUsuarioDto">
+            <summary>
+            DTO para criação de usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.NomeFilial">
+            <summary>
+            Nome da filial/empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.Email">
+            <summary>
+            Email do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.Senha">
+            <summary>
+            Senha do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.Cnpj">
+            <summary>
+            CNPJ da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.Endereco">
+            <summary>
+            Endereço da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.Telefone">
+            <summary>
+            Telefone de contato
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.CriarUsuarioDto.Perfil">
+            <summary>
+            Perfil do usuário no sistema
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.AtualizarUsuarioDto">
+            <summary>
+            DTO para atualização de usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarUsuarioDto.NomeFilial">
+            <summary>
+            Nome da filial/empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarUsuarioDto.Email">
+            <summary>
+            Email do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarUsuarioDto.Cnpj">
+            <summary>
+            CNPJ da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarUsuarioDto.Endereco">
+            <summary>
+            Endereço da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarUsuarioDto.Telefone">
+            <summary>
+            Telefone de contato
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.AtualizarUsuarioDto.Perfil">
+            <summary>
+            Perfil do usuário no sistema
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.DTOs.UsuarioResponseDto">
+            <summary>
+            DTO para resposta de usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Id">
+            <summary>
+            Identificador único do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.NomeFilial">
+            <summary>
+            Nome da filial/empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Email">
+            <summary>
+            Email do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Cnpj">
+            <summary>
+            CNPJ da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Endereco">
+            <summary>
+            Endereço da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Telefone">
+            <summary>
+            Telefone de contato
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Perfil">
+            <summary>
+            Perfil do usuário no sistema
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.DataCriacao">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.DataAtualizacao">
+            <summary>
+            Data da última atualização do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.DTOs.UsuarioResponseDto.Links">
+            <summary>
+            Links HATEOAS
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.Moto">
+            <summary>
+            Entidade que representa uma moto no sistema
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.Id">
+            <summary>
+            Identificador único da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.Placa">
+            <summary>
+            Placa da moto (única)
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.Chassi">
+            <summary>
+            Número do chassi da moto (único)
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.Motor">
+            <summary>
+            Informações do motor da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.UsuarioId">
+            <summary>
+            ID do usuário proprietário da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.DataCriacao">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.DataAtualizacao">
+            <summary>
+            Data da última atualização do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.Usuario">
+            <summary>
+            Usuário proprietário da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.Operacoes">
+            <summary>
+            Lista de operações realizadas com a moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Moto.StatusMotos">
+            <summary>
+            Lista de status da moto
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.Operacao">
+            <summary>
+            Entidade que representa uma operação realizada no sistema
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.Id">
+            <summary>
+            Identificador único da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.TipoOperacao">
+            <summary>
+            Tipo da operação realizada
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.Descricao">
+            <summary>
+            Descrição detalhada da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.DataOperacao">
+            <summary>
+            Data e hora da operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.MotoId">
+            <summary>
+            ID da moto envolvida na operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.UsuarioId">
+            <summary>
+            ID do usuário que realizou a operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.Moto">
+            <summary>
+            Moto envolvida na operação
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Operacao.Usuario">
+            <summary>
+            Usuário que realizou a operação
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.TipoOperacao">
+            <summary>
+            Enum que define os tipos de operações possíveis
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.TipoOperacao.ENTREGA">
+            <summary>
+            Operação de entrega da moto
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.TipoOperacao.COLETA">
+            <summary>
+            Operação de coleta da moto
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.TipoOperacao.MANUTENCAO">
+            <summary>
+            Operação de manutenção da moto
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.TipoOperacao.TRANSFERENCIA">
+            <summary>
+            Operação de transferência da moto
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.TipoOperacao.CHECK_IN">
+            <summary>
+            Check-in da moto
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.TipoOperacao.CHECK_OUT">
+            <summary>
+            Check-out da moto
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.StatusMoto">
+            <summary>
+            Entidade que representa o status atual de uma moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.Id">
+            <summary>
+            Identificador único do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.Status">
+            <summary>
+            Status atual da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.Descricao">
+            <summary>
+            Descrição detalhada do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.Area">
+            <summary>
+            Área onde a moto se encontra
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.DataStatus">
+            <summary>
+            Data e hora do status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.MotoId">
+            <summary>
+            ID da moto
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.UsuarioId">
+            <summary>
+            ID do usuário que registrou o status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.Moto">
+            <summary>
+            Moto relacionada ao status
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.StatusMoto.Usuario">
+            <summary>
+            Usuário que registrou o status
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.StatusMotoEnum">
+            <summary>
+            Enum que define os possíveis status de uma moto
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.DISPONIVEL">
+            <summary>
+            Moto disponível para uso
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.EM_USO">
+            <summary>
+            Moto em uso no momento
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.MANUTENCAO">
+            <summary>
+            Moto em manutenção
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.INDISPONIVEL">
+            <summary>
+            Moto indisponível
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.PENDENTE">
+            <summary>
+            Moto com status pendente
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.REPARO_SIMPLES">
+            <summary>
+            Moto com reparo simples necessário
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.DANOS_ESTRUTURAIS">
+            <summary>
+            Moto com danos estruturais
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.MOTOR_DEFEITUOSO">
+            <summary>
+            Moto com motor defeituoso
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.MANUTENCAO_AGENDADA">
+            <summary>
+            Moto com manutenção agendada
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.PRONTA">
+            <summary>
+            Moto pronta para uso
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.SEM_PLACA">
+            <summary>
+            Moto sem placa
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.ALUGADA">
+            <summary>
+            Moto alugada
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.StatusMotoEnum.AGUARDANDO_ALUGUEL">
+            <summary>
+            Moto aguardando aluguel
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.Usuario">
+            <summary>
+            Entidade que representa um usuário do sistema
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Id">
+            <summary>
+            Identificador único do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.NomeFilial">
+            <summary>
+            Nome da filial/empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Email">
+            <summary>
+            Email do usuário (único)
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.SenhaHash">
+            <summary>
+            Hash da senha do usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Cnpj">
+            <summary>
+            CNPJ da empresa (único)
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Endereco">
+            <summary>
+            Endereço da empresa
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Telefone">
+            <summary>
+            Telefone de contato
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Perfil">
+            <summary>
+            Perfil do usuário no sistema
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.DataCriacao">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.DataAtualizacao">
+            <summary>
+            Data da última atualização do registro
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Motos">
+            <summary>
+            Lista de motos associadas ao usuário
+            </summary>
+        </member>
+        <member name="P:challenge_3_net.Models.Usuario.Operacoes">
+            <summary>
+            Lista de operações realizadas pelo usuário
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Models.PerfilUsuario">
+            <summary>
+            Enum que define os perfis de usuário no sistema
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.PerfilUsuario.ADMIN">
+            <summary>
+            Administrador com acesso total ao sistema
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.PerfilUsuario.GERENTE">
+            <summary>
+            Gerente com acesso a relatórios e operações
+            </summary>
+        </member>
+        <member name="F:challenge_3_net.Models.PerfilUsuario.OPERADOR">
+            <summary>
+            Operador com acesso limitado às operações
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Repositories.Interfaces.IMotoRepository">
+            <summary>
+            Interface específica para repositório de motos
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.GetByPlacaAsync(System.String)">
+            <summary>
+            Obtém moto por placa
+            </summary>
+            <param name="placa">Placa da moto</param>
+            <returns>Moto encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.GetByChassiAsync(System.String)">
+            <summary>
+            Obtém moto por chassi
+            </summary>
+            <param name="chassi">Chassi da moto</param>
+            <returns>Moto encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.PlacaExistsAsync(System.String,System.Nullable{System.Int64})">
+            <summary>
+            Verifica se placa já existe
+            </summary>
+            <param name="placa">Placa a verificar</param>
+            <param name="excludeId">ID a excluir da verificação (para atualizações)</param>
+            <returns>True se placa já existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.ChassiExistsAsync(System.String,System.Nullable{System.Int64})">
+            <summary>
+            Verifica se chassi já existe
+            </summary>
+            <param name="chassi">Chassi a verificar</param>
+            <param name="excludeId">ID a excluir da verificação (para atualizações)</param>
+            <returns>True se chassi já existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.GetByUsuarioIdAsync(System.Int64)">
+            <summary>
+            Obtém motos por usuário
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <returns>Lista de motos do usuário</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.GetPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém motos com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de motos</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IMotoRepository.GetPagedByUsuarioIdAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém motos por usuário com paginação
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de motos do usuário</returns>
+        </member>
+        <member name="T:challenge_3_net.Repositories.Interfaces.IOperacaoRepository">
+            <summary>
+            Interface específica para repositório de operações
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetByMotoIdAsync(System.Int64)">
+            <summary>
+            Obtém operações por moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <returns>Lista de operações da moto</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetByUsuarioIdAsync(System.Int64)">
+            <summary>
+            Obtém operações por usuário
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <returns>Lista de operações do usuário</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetByTipoOperacaoAsync(challenge_3_net.Models.TipoOperacao)">
+            <summary>
+            Obtém operações por tipo
+            </summary>
+            <param name="tipoOperacao">Tipo da operação</param>
+            <returns>Lista de operações do tipo</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetByPeriodoAsync(System.DateTime,System.DateTime)">
+            <summary>
+            Obtém operações por período
+            </summary>
+            <param name="dataInicio">Data de início</param>
+            <param name="dataFim">Data de fim</param>
+            <returns>Lista de operações no período</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém operações com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetPagedByMotoIdAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém operações por moto com paginação
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações da moto</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IOperacaoRepository.GetPagedByUsuarioIdAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém operações por usuário com paginação
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações do usuário</returns>
+        </member>
+        <member name="T:challenge_3_net.Repositories.Interfaces.IRepository`1">
+            <summary>
+            Interface base para repositórios seguindo o padrão Repository
+            </summary>
+            <typeparam name="T">Tipo da entidade</typeparam>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.GetByIdAsync(System.Int64)">
+            <summary>
+            Obtém uma entidade por ID
+            </summary>
+            <param name="id">ID da entidade</param>
+            <returns>Entidade encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.GetAllAsync">
+            <summary>
+            Obtém todas as entidades
+            </summary>
+            <returns>Lista de entidades</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.GetWhereAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtém entidades com filtro
+            </summary>
+            <param name="predicate">Expressão de filtro</param>
+            <returns>Lista de entidades filtradas</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.GetFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtém a primeira entidade que atende ao filtro
+            </summary>
+            <param name="predicate">Expressão de filtro</param>
+            <returns>Primeira entidade encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.AddAsync(`0)">
+            <summary>
+            Adiciona uma nova entidade
+            </summary>
+            <param name="entity">Entidade a ser adicionada</param>
+            <returns>Entidade adicionada</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.UpdateAsync(`0)">
+            <summary>
+            Atualiza uma entidade existente
+            </summary>
+            <param name="entity">Entidade a ser atualizada</param>
+            <returns>Entidade atualizada</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.RemoveAsync(`0)">
+            <summary>
+            Remove uma entidade
+            </summary>
+            <param name="entity">Entidade a ser removida</param>
+            <returns>True se removida com sucesso</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.RemoveByIdAsync(System.Int64)">
+            <summary>
+            Remove uma entidade por ID
+            </summary>
+            <param name="id">ID da entidade</param>
+            <returns>True se removida com sucesso</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.ExistsAsync(System.Int64)">
+            <summary>
+            Verifica se existe uma entidade com o ID especificado
+            </summary>
+            <param name="id">ID da entidade</param>
+            <returns>True se existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.CountAsync">
+            <summary>
+            Conta o total de entidades
+            </summary>
+            <returns>Total de entidades</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Conta entidades com filtro
+            </summary>
+            <param name="predicate">Expressão de filtro</param>
+            <returns>Total de entidades filtradas</returns>
+        </member>
+        <member name="T:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository">
+            <summary>
+            Interface específica para repositório de status de motos
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetStatusAtualAsync(System.Int64)">
+            <summary>
+            Obtém status atual de uma moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <returns>Status atual da moto ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetHistoricoByMotoIdAsync(System.Int64)">
+            <summary>
+            Obtém histórico de status de uma moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <returns>Lista de status da moto</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetByStatusAsync(challenge_3_net.Models.StatusMotoEnum)">
+            <summary>
+            Obtém status por tipo
+            </summary>
+            <param name="status">Status a buscar</param>
+            <returns>Lista de status do tipo</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetByAreaAsync(System.String)">
+            <summary>
+            Obtém status por área
+            </summary>
+            <param name="area">Área a buscar</param>
+            <returns>Lista de status da área</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetByPeriodoAsync(System.DateTime,System.DateTime)">
+            <summary>
+            Obtém status por período
+            </summary>
+            <param name="dataInicio">Data de início</param>
+            <param name="dataFim">Data de fim</param>
+            <returns>Lista de status no período</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém status com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de status</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IStatusMotoRepository.GetPagedByMotoIdAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém status por moto com paginação
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de status da moto</returns>
+        </member>
+        <member name="T:challenge_3_net.Repositories.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface específica para repositório de usuários
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IUsuarioRepository.GetByEmailAsync(System.String)">
+            <summary>
+            Obtém usuário por email
+            </summary>
+            <param name="email">Email do usuário</param>
+            <returns>Usuário encontrado ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IUsuarioRepository.GetByCnpjAsync(System.String)">
+            <summary>
+            Obtém usuário por CNPJ
+            </summary>
+            <param name="cnpj">CNPJ do usuário</param>
+            <returns>Usuário encontrado ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IUsuarioRepository.EmailExistsAsync(System.String,System.Nullable{System.Int64})">
+            <summary>
+            Verifica se email já existe
+            </summary>
+            <param name="email">Email a verificar</param>
+            <param name="excludeId">ID a excluir da verificação (para atualizações)</param>
+            <returns>True se email já existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IUsuarioRepository.CnpjExistsAsync(System.String,System.Nullable{System.Int64})">
+            <summary>
+            Verifica se CNPJ já existe
+            </summary>
+            <param name="cnpj">CNPJ a verificar</param>
+            <param name="excludeId">ID a excluir da verificação (para atualizações)</param>
+            <returns>True se CNPJ já existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Repositories.Interfaces.IUsuarioRepository.GetPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém usuários com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de usuários</returns>
+        </member>
+        <member name="T:challenge_3_net.Repositories.MotoRepository">
+            <summary>
+            Implementação do repositório de motos
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Repositories.OperacaoRepository">
+            <summary>
+            Implementação do repositório de operações
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Repositories.Repository`1">
+            <summary>
+            Implementação base do repositório usando Entity Framework
+            </summary>
+            <typeparam name="T">Tipo da entidade</typeparam>
+        </member>
+        <member name="T:challenge_3_net.Repositories.StatusMotoRepository">
+            <summary>
+            Implementação do repositório de status de motos
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Repositories.UsuarioRepository">
+            <summary>
+            Implementação do repositório de usuários
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Services.BaseService">
+            <summary>
+            Classe base para serviços com funcionalidades comuns
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Services.BaseService.CreateHateoasLinks(System.Int64,System.String,System.String)">
+            <summary>
+            Cria links HATEOAS para uma entidade
+            </summary>
+            <param name="id">ID da entidade</param>
+            <param name="controllerName">Nome do controller</param>
+            <param name="baseUrl">URL base da API</param>
+            <returns>Lista de links</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.BaseService.CreatePaginationLinks(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Cria links HATEOAS para paginação
+            </summary>
+            <param name="pageNumber">Número da página atual</param>
+            <param name="pageSize">Tamanho da página</param>
+            <param name="totalPages">Total de páginas</param>
+            <param name="controllerName">Nome do controller</param>
+            <param name="baseUrl">URL base da API</param>
+            <returns>Lista de links de paginação</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.BaseService.CreatePagedResult``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Int64,System.String,System.String)">
+            <summary>
+            Cria resultado paginado com links HATEOAS
+            </summary>
+            <typeparam name="T">Tipo dos itens</typeparam>
+            <param name="items">Itens da página</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <param name="totalItems">Total de itens</param>
+            <param name="controllerName">Nome do controller</param>
+            <param name="baseUrl">URL base da API</param>
+            <returns>Resultado paginado</returns>
+        </member>
+        <member name="T:challenge_3_net.Services.Interfaces.IMotoService">
+            <summary>
+            Interface para serviço de motos
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ObterTodasAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém todas as motos com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de motos</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ObterPorIdAsync(System.Int64)">
+            <summary>
+            Obtém moto por ID
+            </summary>
+            <param name="id">ID da moto</param>
+            <returns>Moto encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.CriarAsync(challenge_3_net.Models.DTOs.CriarMotoDto)">
+            <summary>
+            Cria uma nova moto
+            </summary>
+            <param name="dto">Dados da moto</param>
+            <returns>Moto criada</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.AtualizarAsync(System.Int64,challenge_3_net.Models.DTOs.AtualizarMotoDto)">
+            <summary>
+            Atualiza uma moto existente
+            </summary>
+            <param name="id">ID da moto</param>
+            <param name="dto">Dados atualizados</param>
+            <returns>Moto atualizada ou null se não encontrada</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ExcluirAsync(System.Int64)">
+            <summary>
+            Exclui uma moto
+            </summary>
+            <param name="id">ID da moto</param>
+            <returns>True se excluída com sucesso</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ExisteAsync(System.Int64)">
+            <summary>
+            Verifica se moto existe
+            </summary>
+            <param name="id">ID da moto</param>
+            <returns>True se existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ObterPorPlacaAsync(System.String)">
+            <summary>
+            Obtém moto por placa
+            </summary>
+            <param name="placa">Placa da moto</param>
+            <returns>Moto encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ObterPorChassiAsync(System.String)">
+            <summary>
+            Obtém moto por chassi
+            </summary>
+            <param name="chassi">Chassi da moto</param>
+            <returns>Moto encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IMotoService.ObterPorUsuarioAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém motos por usuário
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de motos do usuário</returns>
+        </member>
+        <member name="T:challenge_3_net.Services.Interfaces.IOperacaoService">
+            <summary>
+            Interface para serviço de operações
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ObterTodosAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém todas as operações com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ObterPorIdAsync(System.Int64)">
+            <summary>
+            Obtém operação por ID
+            </summary>
+            <param name="id">ID da operação</param>
+            <returns>Operação encontrada ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.CriarAsync(challenge_3_net.Models.DTOs.CriarOperacaoDto)">
+            <summary>
+            Cria uma nova operação
+            </summary>
+            <param name="dto">Dados da operação</param>
+            <returns>Operação criada</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.AtualizarAsync(System.Int64,challenge_3_net.Models.DTOs.AtualizarOperacaoDto)">
+            <summary>
+            Atualiza uma operação existente
+            </summary>
+            <param name="id">ID da operação</param>
+            <param name="dto">Dados atualizados</param>
+            <returns>Operação atualizada ou null se não encontrada</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ExcluirAsync(System.Int64)">
+            <summary>
+            Exclui uma operação
+            </summary>
+            <param name="id">ID da operação</param>
+            <returns>True se excluída com sucesso</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ExisteAsync(System.Int64)">
+            <summary>
+            Verifica se operação existe
+            </summary>
+            <param name="id">ID da operação</param>
+            <returns>True se existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ObterPorMotoAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém operações por moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações da moto</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ObterPorUsuarioAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém operações por usuário
+            </summary>
+            <param name="usuarioId">ID do usuário</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações do usuário</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IOperacaoService.ObterPorTipoAsync(challenge_3_net.Models.TipoOperacao,System.Int32,System.Int32)">
+            <summary>
+            Obtém operações por tipo
+            </summary>
+            <param name="tipoOperacao">Tipo da operação</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de operações do tipo</returns>
+        </member>
+        <member name="T:challenge_3_net.Services.Interfaces.IStatusMotoService">
+            <summary>
+            Interface para serviço de status de motos
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ObterTodosAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém todos os status com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de status</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ObterPorIdAsync(System.Int64)">
+            <summary>
+            Obtém status por ID
+            </summary>
+            <param name="id">ID do status</param>
+            <returns>Status encontrado ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.CriarAsync(challenge_3_net.Models.DTOs.CriarStatusMotoDto)">
+            <summary>
+            Cria um novo status
+            </summary>
+            <param name="dto">Dados do status</param>
+            <returns>Status criado</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.AtualizarAsync(System.Int64,challenge_3_net.Models.DTOs.AtualizarStatusMotoDto)">
+            <summary>
+            Atualiza um status existente
+            </summary>
+            <param name="id">ID do status</param>
+            <param name="dto">Dados atualizados</param>
+            <returns>Status atualizado ou null se não encontrado</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ExcluirAsync(System.Int64)">
+            <summary>
+            Exclui um status
+            </summary>
+            <param name="id">ID do status</param>
+            <returns>True se excluído com sucesso</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ExisteAsync(System.Int64)">
+            <summary>
+            Verifica se status existe
+            </summary>
+            <param name="id">ID do status</param>
+            <returns>True se existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ObterStatusAtualAsync(System.Int64)">
+            <summary>
+            Obtém status atual de uma moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <returns>Status atual da moto ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ObterHistoricoPorMotoAsync(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Obtém histórico de status de uma moto
+            </summary>
+            <param name="motoId">ID da moto</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de status da moto</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IStatusMotoService.ObterPorStatusAsync(challenge_3_net.Models.StatusMotoEnum,System.Int32,System.Int32)">
+            <summary>
+            Obtém status por tipo
+            </summary>
+            <param name="status">Status a buscar</param>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de status do tipo</returns>
+        </member>
+        <member name="T:challenge_3_net.Services.Interfaces.IUsuarioService">
+            <summary>
+            Interface para serviço de usuários
+            </summary>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.ObterTodosAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém todos os usuários com paginação
+            </summary>
+            <param name="pageNumber">Número da página</param>
+            <param name="pageSize">Tamanho da página</param>
+            <returns>Lista paginada de usuários</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.ObterPorIdAsync(System.Int64)">
+            <summary>
+            Obtém usuário por ID
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>Usuário encontrado ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.CriarAsync(challenge_3_net.Models.DTOs.CriarUsuarioDto)">
+            <summary>
+            Cria um novo usuário
+            </summary>
+            <param name="dto">Dados do usuário</param>
+            <returns>Usuário criado</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.AtualizarAsync(System.Int64,challenge_3_net.Models.DTOs.AtualizarUsuarioDto)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário</param>
+            <param name="dto">Dados atualizados</param>
+            <returns>Usuário atualizado ou null se não encontrado</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.ExcluirAsync(System.Int64)">
+            <summary>
+            Exclui um usuário
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>True se excluído com sucesso</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.ExisteAsync(System.Int64)">
+            <summary>
+            Verifica se usuário existe
+            </summary>
+            <param name="id">ID do usuário</param>
+            <returns>True se existe</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.ObterPorEmailAsync(System.String)">
+            <summary>
+            Obtém usuário por email
+            </summary>
+            <param name="email">Email do usuário</param>
+            <returns>Usuário encontrado ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.ObterPorCnpjAsync(System.String)">
+            <summary>
+            Obtém usuário por CNPJ
+            </summary>
+            <param name="cnpj">CNPJ do usuário</param>
+            <returns>Usuário encontrado ou null</returns>
+        </member>
+        <member name="M:challenge_3_net.Services.Interfaces.IUsuarioService.Autenticar(System.String,System.String)">
+            <summary>
+            Autentica um usuário pelo e-mail e senha.
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Usuário autenticado ou null</returns>
+        </member>
+        <member name="T:challenge_3_net.Services.Mapping.AutoMapperProfile">
+            <summary>
+            Perfil de mapeamento do AutoMapper
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Services.MotoService">
+            <summary>
+            Serviço para gerenciamento de motos
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Services.OperacaoService">
+            <summary>
+            Serviço para gerenciamento de operações
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Services.StatusMotoService">
+            <summary>
+            Serviço para gerenciamento de status de motos
+            </summary>
+        </member>
+        <member name="T:challenge_3_net.Services.UsuarioService">
+            <summary>
+            Serviço para gerenciamento de usuários
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,9 @@
+# Arquivos e pastas do Visual Studio
+.vs/
+*.user
+*.suo
+*.vsidx
+
+# Binários e builds
+bin/
+obj/

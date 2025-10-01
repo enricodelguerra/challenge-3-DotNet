@@ -1,0 +1,371 @@
+### 🧪 TESTES COMPLETOS DA API - Sistema de Gestão de Motos
+### Base URL: https://localhost:7225
+
+### ===========================================
+### 👥 TESTES - USUÁRIOS
+### ===========================================
+
+### 1. Criar Usuário Admin
+POST https://localhost:7225/api/Usuarios
+Content-Type: application/json
+
+{
+  "nomeFilial": "Empresa Admin",
+  "email": "admin@empresa.com",
+  "senha": "admin123",
+  "cnpj": "11.111.111/0001-11",
+  "endereco": "Rua Admin, 100",
+  "telefone": "(11) 11111-1111",
+  "perfil": "ADMIN"
+}
+
+### 2. Criar Usuário Gerente
+POST https://localhost:7225/api/Usuarios
+Content-Type: application/json
+
+{
+  "nomeFilial": "Empresa Gerente",
+  "email": "gerente@empresa.com",
+  "senha": "gerente123",
+  "cnpj": "22.222.222/0001-22",
+  "endereco": "Rua Gerente, 200",
+  "telefone": "(11) 22222-2222",
+  "perfil": "GERENTE"
+}
+
+### 3. Criar Usuário Operador
+POST https://localhost:7225/api/Usuarios
+Content-Type: application/json
+
+{
+  "nomeFilial": "Empresa Operador",
+  "email": "operador@empresa.com",
+  "senha": "operador123",
+  "cnpj": "33.333.333/0001-33",
+  "endereco": "Rua Operador, 300",
+  "telefone": "(11) 33333-3333",
+  "perfil": "OPERADOR"
+}
+
+### 4. Listar Todos os Usuários
+GET https://localhost:7225/api/Usuarios
+
+### 5. Buscar Usuário por ID
+GET https://localhost:7225/api/Usuarios/1
+
+### 6. Atualizar Usuário
+PUT https://localhost:7225/api/Usuarios/1
+Content-Type: application/json
+
+{
+  "nomeFilial": "Empresa Admin Atualizada",
+  "email": "admin@empresa.com",
+  "senha": "admin123",
+  "cnpj": "11.111.111/0001-11",
+  "endereco": "Rua Admin Atualizada, 100",
+  "telefone": "(11) 11111-1111",
+  "perfil": "ADMIN"
+}
+
+### ===========================================
+### 🏍️ TESTES - MOTOS
+### ===========================================
+
+### 7. Cadastrar Moto para Usuário 1
+POST https://localhost:7225/api/Motos
+Content-Type: application/json
+
+{
+  "placa": "ABC-1234",
+  "chassi": "12345678901234567",
+  "motor": "Motor 150cc",
+  "usuarioId": 1
+}
+
+### 8. Cadastrar Moto para Usuário 2
+POST https://localhost:7225/api/Motos
+Content-Type: application/json
+
+{
+  "placa": "DEF-5678",
+  "chassi": "23456789012345678",
+  "motor": "Motor 200cc",
+  "usuarioId": 2
+}
+
+### 9. Cadastrar Moto para Usuário 3
+POST https://localhost:7225/api/Motos
+Content-Type: application/json
+
+{
+  "placa": "GHI-9012",
+  "chassi": "34567890123456789",
+  "motor": "Motor 300cc",
+  "usuarioId": 3
+}
+
+### 10. Listar Todas as Motos
+GET https://localhost:7225/api/Motos
+
+### 11. Buscar Moto por ID
+GET https://localhost:7225/api/Motos/1
+
+### 12. Atualizar Moto
+PUT https://localhost:7225/api/Motos/1
+Content-Type: application/json
+
+{
+  "placa": "ABC-1234",
+  "chassi": "12345678901234567",
+  "motor": "Motor 150cc Atualizado",
+  "usuarioId": 1
+}
+
+### ===========================================
+### ⚙️ TESTES - OPERAÇÕES
+### ===========================================
+
+### 13. Registrar Operação de Entrega
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "ENTREGA",
+  "descricao": "Entrega da moto para cliente",
+  "dataOperacao": "2025-01-16T10:00:00Z",
+  "motoId": 1,
+  "usuarioId": 1
+}
+
+### 14. Registrar Operação de Coleta
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "COLETA",
+  "descricao": "Coleta da moto do cliente",
+  "dataOperacao": "2025-01-16T14:00:00Z",
+  "motoId": 1,
+  "usuarioId": 1
+}
+
+### 15. Registrar Operação de Manutenção
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "MANUTENCAO",
+  "descricao": "Manutenção preventiva da moto",
+  "dataOperacao": "2025-01-16T16:00:00Z",
+  "motoId": 2,
+  "usuarioId": 2
+}
+
+### 16. Registrar Operação de Transferência
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "TRANSFERENCIA",
+  "descricao": "Transferência da moto para outra filial",
+  "dataOperacao": "2025-01-16T18:00:00Z",
+  "motoId": 3,
+  "usuarioId": 3
+}
+
+### 17. Registrar Check-in
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "CHECK_IN",
+  "descricao": "Check-in da moto na base",
+  "dataOperacao": "2025-01-16T20:00:00Z",
+  "motoId": 1,
+  "usuarioId": 1
+}
+
+### 18. Registrar Check-out
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "CHECK_OUT",
+  "descricao": "Check-out da moto da base",
+  "dataOperacao": "2025-01-16T22:00:00Z",
+  "motoId": 2,
+  "usuarioId": 2
+}
+
+### 19. Listar Todas as Operações
+GET https://localhost:7225/api/Operacoes
+
+### 20. Buscar Operação por ID
+GET https://localhost:7225/api/Operacoes/1
+
+### ===========================================
+### 📊 TESTES - STATUS DAS MOTOS
+### ===========================================
+
+### 21. Registrar Status Disponível
+POST https://localhost:7225/api/StatusMotos
+Content-Type: application/json
+
+{
+  "status": "DISPONIVEL",
+  "descricao": "Moto disponível para uso",
+  "area": "Centro",
+  "dataStatus": "2025-01-16T08:00:00Z",
+  "motoId": 1,
+  "usuarioId": 1
+}
+
+### 22. Registrar Status Em Uso
+POST https://localhost:7225/api/StatusMotos
+Content-Type: application/json
+
+{
+  "status": "EM_USO",
+  "descricao": "Moto em uso pelo cliente",
+  "area": "Zona Sul",
+  "dataStatus": "2025-01-16T10:00:00Z",
+  "motoId": 1,
+  "usuarioId": 1
+}
+
+### 23. Registrar Status Manutenção
+POST https://localhost:7225/api/StatusMotos
+Content-Type: application/json
+
+{
+  "status": "MANUTENCAO",
+  "descricao": "Moto em manutenção",
+  "area": "Oficina",
+  "dataStatus": "2025-01-16T12:00:00Z",
+  "motoId": 2,
+  "usuarioId": 2
+}
+
+### 24. Registrar Status Indisponível
+POST https://localhost:7225/api/StatusMotos
+Content-Type: application/json
+
+{
+  "status": "INDISPONIVEL",
+  "descricao": "Moto temporariamente indisponível",
+  "area": "Depósito",
+  "dataStatus": "2025-01-16T14:00:00Z",
+  "motoId": 3,
+  "usuarioId": 3
+}
+
+### 25. Listar Todos os Status
+GET https://localhost:7225/api/StatusMotos
+
+### 26. Buscar Status por ID
+GET https://localhost:7225/api/StatusMotos/1
+
+### ===========================================
+### 🔍 TESTES DE VALIDAÇÃO E ERRO
+### ===========================================
+
+### 27. Teste de Validação - Email Inválido
+POST https://localhost:7225/api/Usuarios
+Content-Type: application/json
+
+{
+  "nomeFilial": "Teste",
+  "email": "email-invalido",
+  "senha": "123456",
+  "cnpj": "44.444.444/0001-44",
+  "perfil": "ADMIN"
+}
+
+### 28. Teste de Validação - CNPJ Duplicado
+POST https://localhost:7225/api/Usuarios
+Content-Type: application/json
+
+{
+  "nomeFilial": "Teste Duplicado",
+  "email": "teste@duplicado.com",
+  "senha": "123456",
+  "cnpj": "11.111.111/0001-11",
+  "perfil": "ADMIN"
+}
+
+### 29. Teste de Validação - Placa Duplicada
+POST https://localhost:7225/api/Motos
+Content-Type: application/json
+
+{
+  "placa": "ABC-1234",
+  "chassi": "99999999999999999",
+  "motor": "Motor Teste",
+  "usuarioId": 1
+}
+
+### 30. Teste de Validação - Chassi Duplicado
+POST https://localhost:7225/api/Motos
+Content-Type: application/json
+
+{
+  "placa": "XYZ-9999",
+  "chassi": "12345678901234567",
+  "motor": "Motor Teste",
+  "usuarioId": 1
+}
+
+### 31. Teste de Validação - Usuário Não Encontrado
+POST https://localhost:7225/api/Motos
+Content-Type: application/json
+
+{
+  "placa": "TEST-0000",
+  "chassi": "00000000000000000",
+  "motor": "Motor Teste",
+  "usuarioId": 999
+}
+
+### 32. Teste de Validação - Moto Não Encontrada
+POST https://localhost:7225/api/Operacoes
+Content-Type: application/json
+
+{
+  "tipoOperacao": "ENTREGA",
+  "descricao": "Teste",
+  "dataOperacao": "2025-01-16T10:00:00Z",
+  "motoId": 999,
+  "usuarioId": 1
+}
+
+### ===========================================
+### 🗑️ TESTES DE EXCLUSÃO
+### ===========================================
+
+### 33. Deletar Operação
+DELETE https://localhost:7225/api/Operacoes/1
+
+### 34. Deletar Status
+DELETE https://localhost:7225/api/StatusMotos/1
+
+### 35. Deletar Moto
+DELETE https://localhost:7225/api/Motos/1
+
+### 36. Deletar Usuário
+DELETE https://localhost:7225/api/Usuarios/1
+
+### ===========================================
+### 📈 TESTES DE PAGINAÇÃO
+### ===========================================
+
+### 37. Listar Usuários com Paginação
+GET https://localhost:7225/api/Usuarios?pageNumber=1&pageSize=10
+
+### 38. Listar Motos com Paginação
+GET https://localhost:7225/api/Motos?pageNumber=1&pageSize=10
+
+### 39. Listar Operações com Paginação
+GET https://localhost:7225/api/Operacoes?pageNumber=1&pageSize=10
+
+### 40. Listar Status com Paginação
+GET https://localhost:7225/api/StatusMotos?pageNumber=1&pageSize=10
