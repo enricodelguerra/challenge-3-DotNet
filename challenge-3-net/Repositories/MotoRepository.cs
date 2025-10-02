@@ -30,26 +30,20 @@ namespace challenge_3_net.Repositories
 
         public async Task<bool> PlacaExistsAsync(string placa, long? excludeId = null)
         {
-            var query = _dbSet.Where(m => m.Placa == placa);
-            
-            if (excludeId.HasValue)
-            {
-                query = query.Where(m => m.Id != excludeId.Value);
-            }
-
-            return await query.AnyAsync();
+            var id = await _context.Motos.AsNoTracking()
+                .Where(m => m.Placa == placa && (excludeId == null || m.Id != excludeId))
+                .Select(m => (long?)m.Id)
+                .FirstOrDefaultAsync();
+            return id != null;
         }
 
         public async Task<bool> ChassiExistsAsync(string chassi, long? excludeId = null)
         {
-            var query = _dbSet.Where(m => m.Chassi == chassi);
-            
-            if (excludeId.HasValue)
-            {
-                query = query.Where(m => m.Id != excludeId.Value);
-            }
-
-            return await query.AnyAsync();
+            var id = await _context.Motos.AsNoTracking()
+                .Where(m => m.Chassi == chassi && (excludeId == null || m.Id != excludeId))
+                .Select(m => (long?)m.Id)
+                .FirstOrDefaultAsync();
+            return id != null;
         }
 
         public async Task<IEnumerable<Moto>> GetByUsuarioIdAsync(long usuarioId)

@@ -47,6 +47,7 @@ namespace challenge_3_net.Data
         {
             base.OnModelCreating(modelBuilder);
 
+
             // Configura delete em cascata para StatusMoto
             modelBuilder.Entity<Moto>()
                 .HasMany(m => m.StatusMotos)

@@ -28,26 +28,20 @@ namespace challenge_3_net.Repositories
 
         public async Task<bool> EmailExistsAsync(string email, long? excludeId = null)
         {
-            var query = _dbSet.Where(u => u.Email == email);
-            
-            if (excludeId.HasValue)
-            {
-                query = query.Where(u => u.Id != excludeId.Value);
-            }
-
-            return await query.AnyAsync();
+            var id = await _context.Usuarios.AsNoTracking()
+                .Where(u => u.Email == email && (excludeId == null || u.Id != excludeId))
+                .Select(u => (long?)u.Id)
+                .FirstOrDefaultAsync();
+            return id != null;
         }
 
         public async Task<bool> CnpjExistsAsync(string cnpj, long? excludeId = null)
         {
-            var query = _dbSet.Where(u => u.Cnpj == cnpj);
-            
-            if (excludeId.HasValue)
-            {
-                query = query.Where(u => u.Id != excludeId.Value);
-            }
-
-            return await query.AnyAsync();
+            var id = await _context.Usuarios.AsNoTracking()
+                .Where(u => u.Cnpj == cnpj && (excludeId == null || u.Id != excludeId))
+                .Select(u => (long?)u.Id)
+                .FirstOrDefaultAsync();
+            return id != null;
         }
 
         public async Task<(IEnumerable<Usuario> Items, long TotalCount)> GetPagedAsync(int pageNumber, int pageSize)

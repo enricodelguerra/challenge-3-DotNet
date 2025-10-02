@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using challenge_3_net.Data;
 using challenge_3_net.Repositories;
 using challenge_3_net.Repositories.Interfaces;
@@ -19,6 +20,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection"));
     options.EnableDetailedErrors();
     options.EnableSensitiveDataLogging();
+    options.LogTo(Console.WriteLine,
+        events: new[] { RelationalEventId.CommandExecuting, RelationalEventId.CommandError },
+        minimumLevel: LogLevel.Information);
 });
 
 // Configurar AutoMapper
