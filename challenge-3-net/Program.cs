@@ -6,7 +6,7 @@ using challenge_3_net.Services;
 using challenge_3_net.Services.Interfaces;
 using challenge_3_net.Services.Mapping;
 using System.Reflection;
-using Oracle.EntityFrameworkCore; // <- adicione este using
+using Oracle.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +15,11 @@ builder.Services.AddControllers();
 
 // Configurar Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.EnableDetailedErrors();
+    options.EnableSensitiveDataLogging();
+});
 
 // Configurar AutoMapper
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));

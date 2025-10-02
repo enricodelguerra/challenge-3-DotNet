@@ -94,8 +94,7 @@
               "RelativeToolTip": "challenge-3-net\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-10-01T20:12:26.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T20:12:26.786Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "challenge-3-net\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-01T15:47:28.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T15:47:28.889Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "challenge-3-net\\Program.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAmwGwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:18:14.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T04:18:14.294Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "challenge-3-net\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAK4AAAAAAAAAAAAmwLgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:44:38.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T13:44:38.584Z"
             },
             {
               "$type": "Document",
@@ -144,7 +140,7 @@
               "RelativeDocumentMoniker": "challenge-3-net\\appsettings.json",
               "ToolTip": "C:\\Users\\Enrico Del Guerra\\OneDrive\\Fiap\\2TDSPH\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\challenge-3-net\\challenge-3-net\\challenge-3-net\\appsettings.json",
               "RelativeToolTip": "challenge-3-net\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-28T04:18:17.391Z",
               "EditorCaption": ""
@@ -159,8 +155,7 @@
               "RelativeToolTip": "challenge-3-net\\Models\\Usuario.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAkwGoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:02.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:10:02.489Z"
             },
             {
               "$type": "Document",
@@ -172,8 +167,7 @@
               "RelativeToolTip": "challenge-3-net\\Controllers\\UsuariosController.cs",
               "ViewState": "AgIAAMgAAAAAAAAAAAAkwNEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:43:43.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T13:43:43.471Z"
             },
             {
               "$type": "Document",
@@ -185,8 +179,7 @@
               "RelativeToolTip": "challenge-3-net\\Repositories\\UsuarioRepository.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAqwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:20.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:10:20.397Z"
             },
             {
               "$type": "Document",
@@ -198,8 +191,7 @@
               "RelativeToolTip": "challenge-3-net\\Services\\UsuarioService.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAowJAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:33.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:10:33.749Z"
             },
             {
               "$type": "Document",
@@ -211,8 +203,7 @@
               "RelativeToolTip": "challenge-3-net\\Services\\Interfaces\\IUsuarioService.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAWwEkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:10:52.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T15:10:52.549Z"
             },
             {
               "$type": "Document",
@@ -224,8 +215,7 @@
               "RelativeToolTip": "challenge-3-net\\Properties\\launchSettings.json",
               "ViewState": "AgIAAA0AAAAAAAAAAABhwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-28T04:23:37.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T04:23:37.456Z"
             },
             {
               "$type": "Document",
@@ -237,8 +227,7 @@
               "RelativeToolTip": "challenge-3-net\\Controllers\\OperacoesController.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAAcwLUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:42:56.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T13:42:56.438Z"
             },
             {
               "$type": "Document",
@@ -250,8 +239,7 @@
               "RelativeToolTip": "challenge-3-net\\Controllers\\MotosController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowMAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:41:47.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T13:41:47.848Z"
             }
           ]
         }

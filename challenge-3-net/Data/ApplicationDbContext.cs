@@ -32,6 +32,17 @@ namespace challenge_3_net.Data
         /// </summary>
         public DbSet<StatusMoto> StatusMotos { get; set; } = null!;
 
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder.Properties<bool>()
+                .HaveConversion<short>()
+                .HaveColumnType("NUMBER(1)");
+
+            configurationBuilder.Properties<bool?>()
+                .HaveConversion<short?>()
+                .HaveColumnType("NUMBER(1)");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
